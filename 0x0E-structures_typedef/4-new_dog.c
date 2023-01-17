@@ -4,22 +4,23 @@
 /**
  * _strlen - a function that gets the length of a string
  *
- * @str: the string to get the length
+ * @s: the string to get the length
  *
- * Return: length of @str
+ * Return: length of @s
  */
 
-int _strlen(const char *str)
+int _strlen(char *s)
 {
-	int length = 0;
+	int i;
+	i = 0;
 
-	while (*str++)
-		length++;
-	return (length);
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
 
 /**
- * _strcopy - a function that returns @dest with a copy of a string from @src
+ * _strcpy - a function that returns @dest with a copy of a string from @src
  *
  * @src: string to copy
  * @dest: copy string here
@@ -27,12 +28,19 @@ int _strlen(const char *str)
  * Return: @dest
  */
 
-char *_strcopy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int len, i;
+	len = 0;
+	while (src[len] != '\0')
+	{
+		len++;
+	}
 
-	for (i = 0; src[i]; i++)
+	for (i = 0; i < len; i++)
+	{
 		dest[i] = src[i];
+	}
 	dest[i] = '\0';
 
 	return (dest);

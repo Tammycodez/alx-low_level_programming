@@ -49,6 +49,7 @@ size_t free_listint_safe(listint_t **h)
 		new->p = (void *)*h;
 		new->next = hptr;
 		hptr = new;
+		
 		add = hptr;
 
 		while (add->next != NULL)

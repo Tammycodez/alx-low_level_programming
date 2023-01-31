@@ -25,6 +25,7 @@ void free_listint2(listint_t **head)
 			/*free temp, that is the current node*/
 			free(temp);
 		}
+		
 		*head = NULL;
 	}
 }

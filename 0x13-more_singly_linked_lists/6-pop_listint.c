@@ -24,10 +24,13 @@ int pop_listint(listint_t **head)
 	next = temp->next;
 	/*get element of first node*/
 	first_node = temp->n;
+	
 	/*free first node*/
 	free(temp);
+	
 	/*set head to second node*/
 	*head = next;
+
 	/*return element of first node*/
 	return (first_node);
 }

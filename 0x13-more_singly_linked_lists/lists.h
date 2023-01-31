@@ -15,8 +15,8 @@
 
 typedef struct listint_s
 {
-	README.md int n;
-	README.md struct listint_s *next;
+	int n;
+	struct listint_s *next;
 
 } listint_t;
 
@@ -30,8 +30,8 @@ typedef struct listint_s
 
 typedef struct listp_s
 {
-	README.md void *p;
-	README.md struct listp_s *next;
+	void *p;
+	struct listp_s *next;
 
 } listp_t;
 
